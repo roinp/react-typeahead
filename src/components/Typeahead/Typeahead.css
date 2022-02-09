@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: rgba(65, 212, 65, 0.829);
+    cursor: pointer;
+}
+
+.typeahead-inputs  {
+    width: 350px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.typeahead-input {
+    width: 350px;
+    height: 40px;
+    border-bottom: 2px solid rgb(9, 238, 9);
+    font-size: 20px;
+    padding: 0 10px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+}
+.typeahead-input:focus {
+    outline: none;
+}
+
+.absolute {
+    outline: none;
+}
+
+.absolute {
+    width: 350px;
+    height: 40px;
+    border-bottom: 2px solid #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    color: #bbb;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.users-list {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.user-name {
+    width: 300px;
+    padding: 0 15px;
+}
+
+
+.image {
+    width: 30px;
+    height: 30px;
+   
+}
+
+.image img {
+   width: 100%;
+}

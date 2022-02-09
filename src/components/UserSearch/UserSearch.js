@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Typeahead from "../Typeahead/Typeahead";
 
 function UserSearch() {
     const [searchValue, setSearchValue] = useState('');
@@ -6,6 +7,7 @@ function UserSearch() {
 
     useEffect(() => {
         if(searchValue === ''){
+            setOptions([])
             return;
         }
 
@@ -15,11 +17,20 @@ function UserSearch() {
             }
         })
         .then(res => res.json())
-        .then(res => setOptions(res));
+        .then(res => {
+            setOptions(res.items)
+        });
     },[searchValue]);
+
+
+    const inputChangeHandler = (value) => {
+        setSearchValue(value)
+    }
     
     return (
-        <div></div>
+        <div>
+            <Typeahead value={searchValue} options={options}  onChange={inputChangeHandler}/>
+        </div>
     );
 }
 
